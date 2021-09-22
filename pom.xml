@@ -30,7 +30,7 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <alibaba.nacos.version>2.0.3</alibaba.nacos.version>
         <spring-boot-admin.version>2.4.3</spring-boot-admin.version>
-        <spring-boot.mybatis>2.2.0</spring-boot.mybatis>
+        <spring-boot.mybatis-plus>3.4.2</spring-boot.mybatis-plus>
         <swagger.fox.version>3.0.0</swagger.fox.version>
         <swagger.core.version>1.6.2</swagger.core.version>
         <kaptcha.version>2.3.2</kaptcha.version>
@@ -89,12 +89,18 @@
                 <version>${spring-boot-admin.version}</version>
             </dependency>
 
-            <!-- Mybatis 依赖配置 -->
+            <!-- Mybatis-plus 依赖配置 -->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${spring-boot.mybatis}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${spring-boot.mybatis-plus}</version>
             </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>org.mybatis.spring.boot</groupId>-->
+                <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+                <!--<version>${spring-boot.mybatis}</version>-->
+            <!--</dependency>-->
 
             <!-- Swagger 依赖配置 -->
             <dependency>
@@ -177,7 +183,14 @@
                 <version>${common-pool.version}</version>
             </dependency>
 
-            <!-- -->
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-core</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- 系统多数据源模块 -->
             <dependency>
                 <groupId>cn.cctvcc</groupId>
                 <artifactId>cctvcc-datasource</artifactId>

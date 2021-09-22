@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cctvcc-modules-system</artifactId>
+    <artifactId>cctvcc-system</artifactId>
     <description> cctvcc系统模块</description>
 
     <dependencies>
@@ -56,9 +56,26 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- 系统核心模块 -->
+        <dependency>
+            <groupId>cn.cctvcc</groupId>
+            <artifactId>cctvcc-core</artifactId>
+        </dependency>
+
+        <!-- 系统多数据源 -->
         <dependency>
             <groupId>cn.cctvcc</groupId>
             <artifactId>cctvcc-datasource</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mybatis-spring</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- 单元测试 -->
