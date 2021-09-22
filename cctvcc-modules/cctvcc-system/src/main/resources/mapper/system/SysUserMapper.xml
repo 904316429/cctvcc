@@ -26,7 +26,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 
 	<sql id="selectUserVo">
-
+		user_id, dept_id, user_name, nick_name, email, phonenumber, sex, avatar, password, status, del_flag, login_ip,
+		login_date, create_by, create_time, update_by, update_time, remark
     </sql>
     
 </mapper>
