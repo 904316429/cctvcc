@@ -1,4 +1,4 @@
-# cctvcc (呲呲)
+# cctvcc (刺刺)
 
 项目地址: www.cctvcc.cn
 
