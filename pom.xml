@@ -21,7 +21,7 @@
     <description>刺刺</description>
 
     <properties>
-        <oonno.version>1.0.0</oonno.version>
+        <cctvcc.version>1.0.0</cctvcc.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -176,8 +176,24 @@
                 <artifactId>commons-pool2</artifactId>
                 <version>${common-pool.version}</version>
             </dependency>
+
+            <!-- -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-datasource</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <!-- bootstrap 启动器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

@@ -8,10 +8,12 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>cctvcc-system</module>
+    </modules>
 
     <artifactId>cctvcc-modules</artifactId>
     <packaging>pom</packaging>
-    <description>系统模块</description>
-
+    <description>cctvcc业务模块</description>
 
 </project>
