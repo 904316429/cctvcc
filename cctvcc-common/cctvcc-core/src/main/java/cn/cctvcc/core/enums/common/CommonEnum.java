@@ -1,4 +1,4 @@
-package cn.cctvcc.core.web.enums.common;
+package cn.cctvcc.core.enums.common;
 
 import java.util.HashMap;
 import java.util.Map;

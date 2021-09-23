@@ -7,35 +7,6 @@ package cn.cctvcc.core.constant;
  */
 public class Constants {
 
-    /**
-     * UTF-8 字符集
-     */
-    public static final String UTF8 = "UTF-8";
-
-    /**
-     * GBK 字符集
-     */
-    public static final String GBK = "GBK";
-
-    /**
-     * RMI 远程方法调用
-     */
-    public static final String LOOKUP_RMI = "rmi://";
-
-    /**
-     * LDAP 远程方法调用
-     */
-    public static final String LOOKUP_LDAP = "ldap://";
-
-    /**
-     * http请求
-     */
-    public static final String HTTP = "http://";
-
-    /**
-     * https请求
-     */
-    public static final String HTTPS = "https://";
 
     /**
      * 成功标记

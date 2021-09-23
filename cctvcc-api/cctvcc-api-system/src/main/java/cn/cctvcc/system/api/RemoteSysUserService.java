@@ -1,4 +1,4 @@
-package com.cctvcc.auth.service;
+package cn.cctvcc.system.api;
 
 import cn.cctvcc.core.constant.ServiceNameConstants;
 import cn.cctvcc.core.domain.R;

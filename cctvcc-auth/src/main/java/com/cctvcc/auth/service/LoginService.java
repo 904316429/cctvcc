@@ -1,7 +1,6 @@
 package com.cctvcc.auth.service;
 
 import cn.cctvcc.core.domain.R;
-import com.cctvcc.auth.domain.LoginBody;
 
 /**
  * @description: 用户登录校验
@@ -13,6 +12,6 @@ public interface LoginService {
     /**
      * 登录
      */
-    R<?> login(LoginBody loginBody);
+    R<?> login(String username, String password);
 
 }

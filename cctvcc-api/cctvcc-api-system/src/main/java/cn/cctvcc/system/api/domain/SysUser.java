@@ -43,9 +43,6 @@ public class SysUser extends BaseEntity {
     /** 密码 */
     private String password;
 
-    /** 盐加密 */
-    private String salt;
-
     /** 帐号状态（0正常 1停用） */
     private String status;
 
@@ -141,14 +138,6 @@ public class SysUser extends BaseEntity {
         this.password = password;
     }
 
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -202,7 +191,6 @@ public class SysUser extends BaseEntity {
                 ", sex='" + sex + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
                 ", status='" + status + '\'' +
                 ", delFlag='" + delFlag + '\'' +
                 ", loginIp='" + loginIp + '\'' +

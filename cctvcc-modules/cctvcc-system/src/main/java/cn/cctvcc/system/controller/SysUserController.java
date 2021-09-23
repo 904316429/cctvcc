@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * @description: 用户信息控制层
@@ -28,10 +29,14 @@ public class SysUserController {
      */
     @GetMapping(value = "/userInfo/{userName}")
     public R<LoginUser> userInfo(@PathVariable("userName") String userName) {
-
         SysUser sysUser = this.sysUserService.selectUserByUserName( userName);
+        if(Objects.isNull(sysUser))
+            return R.fail("用户或密码错误");
 
-        return R.ok(new LoginUser());
+        LoginUser loginUser = new LoginUser();
+        loginUser.setSysUser(sysUser);
+
+        return R.ok(loginUser);
     }
 
 }

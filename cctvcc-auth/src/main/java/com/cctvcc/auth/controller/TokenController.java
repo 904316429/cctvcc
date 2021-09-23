@@ -25,7 +25,7 @@ public class TokenController {
      */
     @PostMapping( value = "login")
     public R<?> lgoin(@RequestBody LoginBody loginBody){
-        return this.loginService.login(loginBody);
+        return this.loginService.login(loginBody.getUsername(), loginBody.getPassword());
     }
 
 }
