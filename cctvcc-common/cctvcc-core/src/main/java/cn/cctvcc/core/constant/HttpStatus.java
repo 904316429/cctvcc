@@ -1,4 +1,4 @@
-package cn.cctvcc.core.web.constant;
+package cn.cctvcc.core.constant;
 
 /**
  * @description: 返回状态码

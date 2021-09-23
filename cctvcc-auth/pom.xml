@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cctvcc-auth</artifactId>
-    <description>cctvcc授权中心</description>
+    <description>cctvcc认证授权中心</description>
 
     <dependencies>
 
@@ -44,11 +44,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- RuoYi Common Security-->
-        <!--<dependency>-->
-            <!--<groupId>com.ruoyi</groupId>-->
-            <!--<artifactId>ruoyi-common-security</artifactId>-->
-        <!--</dependency>-->
+        <!-- cctvcc security-->
+        <dependency>
+            <groupId>cn.cctvcc</groupId>
+            <artifactId>cctvcc-security</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -1,6 +1,6 @@
 package cn.cctvcc.core.web.domain;
 
-import cn.cctvcc.core.web.constant.HttpStatus;
+import cn.cctvcc.core.constant.HttpStatus;
 
 import java.util.HashMap;
 import java.util.Objects;

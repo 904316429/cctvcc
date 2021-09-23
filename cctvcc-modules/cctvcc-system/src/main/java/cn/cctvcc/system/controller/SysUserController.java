@@ -1,14 +1,15 @@
 package cn.cctvcc.system.controller;
 
-import cn.cctvcc.core.web.domain.AjaxResult;
-import cn.cctvcc.system.domain.entity.SysUser;
+import cn.cctvcc.core.domain.R;
+import cn.cctvcc.system.api.domain.LoginUser;
+import cn.cctvcc.system.api.domain.SysUser;
 import cn.cctvcc.system.service.SysUserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @description: 用户信息控制层
@@ -23,13 +24,14 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     /**
-     * 用户信息列表查询
-     * @param sysUser
-     * @return
+     * 获取用户信息
      */
-    @GetMapping( value="/list")
-    public AjaxResult list(SysUser sysUser){
-        List<SysUser> list = sysUserService.selectList(sysUser);
-        return AjaxResult.success(list);
+    @GetMapping(value = "/userInfo/{userName}")
+    public R<LoginUser> userInfo(@PathVariable("userName") String userName) {
+
+        SysUser sysUser = this.sysUserService.selectUserByUserName( userName);
+
+        return R.ok(new LoginUser());
     }
+
 }

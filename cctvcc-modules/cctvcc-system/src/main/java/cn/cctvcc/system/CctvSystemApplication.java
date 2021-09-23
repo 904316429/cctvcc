@@ -13,13 +13,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class CctvSystemApplication {
 
-//    @Bean
-//    public MybatisPlusInterceptor mybatisPlusInterceptor() {
-//        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-//        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
-//        return interceptor;
-//    }
-
     public static void main(String[] args) {
         SpringApplication.run(CctvSystemApplication.class, args);
     }

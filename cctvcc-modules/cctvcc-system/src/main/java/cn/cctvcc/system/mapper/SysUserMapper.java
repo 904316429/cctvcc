@@ -1,6 +1,6 @@
 package cn.cctvcc.system.mapper;
 
-import cn.cctvcc.system.domain.entity.SysUser;
+import cn.cctvcc.system.api.domain.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

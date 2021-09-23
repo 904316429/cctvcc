@@ -1,15 +1,13 @@
-package cn.cctvcc.system.domain.entity;
+package cn.cctvcc.system.api.domain;
 
 import cn.cctvcc.core.web.domain.BaseEntity;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.time.LocalTime;
 
 /**
  * @description:
  * @author: Jiang
- * @create: 2021-09-22 15:14
+ * @create: 2021-09-23 15:27
  */
 public class SysUser extends BaseEntity {
 
@@ -27,6 +25,9 @@ public class SysUser extends BaseEntity {
     /** 用户昵称 */
     private String nickName;
 
+    /** 用户类型（0系统用户 1注册用户） */
+    private String userType;
+
     /** 用户邮箱 */
     private String email;
 
@@ -42,6 +43,9 @@ public class SysUser extends BaseEntity {
     /** 密码 */
     private String password;
 
+    /** 盐加密 */
+    private String salt;
+
     /** 帐号状态（0正常 1停用） */
     private String status;
 
@@ -53,6 +57,9 @@ public class SysUser extends BaseEntity {
 
     /** 最后登录时间 */
     private LocalTime loginDate;
+
+    /** 密码最后更新时间 */
+    private LocalTime pwdUpdateDate;
 
     public Long getUserId() {
         return userId;
@@ -84,6 +91,14 @@ public class SysUser extends BaseEntity {
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
     public String getEmail() {
@@ -126,6 +141,14 @@ public class SysUser extends BaseEntity {
         this.password = password;
     }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -158,27 +181,33 @@ public class SysUser extends BaseEntity {
         this.loginDate = loginDate;
     }
 
+    public LocalTime getPwdUpdateDate() {
+        return pwdUpdateDate;
+    }
+
+    public void setPwdUpdateDate(LocalTime pwdUpdateDate) {
+        this.pwdUpdateDate = pwdUpdateDate;
+    }
+
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
-                .append("userId", getUserId())
-                .append("deptId", getDeptId())
-                .append("userName", getUserName())
-                .append("nickName", getNickName())
-                .append("email", getEmail())
-                .append("phonenumber", getPhonenumber())
-                .append("sex", getSex())
-                .append("avatar", getAvatar())
-                .append("password", getPassword())
-                .append("status", getStatus())
-                .append("delFlag", getDelFlag())
-                .append("loginIp", getLoginIp())
-                .append("loginDate", getLoginDate())
-                .append("createBy", getCreateBy())
-                .append("createTime", getCreateTime())
-                .append("updateBy", getUpdateBy())
-                .append("updateTime", getUpdateTime())
-                .append("remark", getRemark())
-                .toString();
+        return "SysUser{" +
+                "userId=" + userId +
+                ", deptId=" + deptId +
+                ", userName='" + userName + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", userType='" + userType + '\'' +
+                ", email='" + email + '\'' +
+                ", phonenumber='" + phonenumber + '\'' +
+                ", sex='" + sex + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", status='" + status + '\'' +
+                ", delFlag='" + delFlag + '\'' +
+                ", loginIp='" + loginIp + '\'' +
+                ", loginDate=" + loginDate +
+                ", pwdUpdateDate=" + pwdUpdateDate +
+                '}';
     }
 }

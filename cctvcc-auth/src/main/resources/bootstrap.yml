@@ -1,0 +1,26 @@
+# Tomcat
+server:
+  port: 9000
+
+# Spring
+spring:
+  application:
+    name: cctvcc-auth # 应用名称
+  profiles:
+    active: dev # 环境配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos 服务注册中心地址
+        namespace: 2b699ec0-2a6a-47f7-ab0c-b7ff0bc956dc # 命名空间id
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr} # 配置中心地址
+        # 配置文件格式
+        file-extension: yml
+        namespace: ${spring.cloud.nacos.discovery.namespace} # 命名空间id
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          - data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true

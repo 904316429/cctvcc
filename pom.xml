@@ -190,10 +190,45 @@
                 <version>${cctvcc.version}</version>
             </dependency>
 
-            <!-- 系统多数据源模块 -->
+            <!-- 多数据源模块 -->
             <dependency>
                 <groupId>cn.cctvcc</groupId>
                 <artifactId>cctvcc-datasource</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- 日志模块 -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-log</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- reids模块 -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-redis</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-security</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- 接口模块 -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-swagger</artifactId>
+                <version>${cctvcc.version}</version>
+            </dependency>
+
+            <!-- api-system -->
+            <dependency>
+                <groupId>cn.cctvcc</groupId>
+                <artifactId>cctvcc-api-system</artifactId>
                 <version>${cctvcc.version}</version>
             </dependency>
 

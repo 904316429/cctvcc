@@ -1,8 +1,7 @@
 package cn.cctvcc.system.service;
 
-import cn.cctvcc.system.domain.entity.SysUser;
+import cn.cctvcc.system.api.domain.SysUser;
 
-import java.util.List;
 
 /**
  * @description: 用户信息接口类
@@ -12,10 +11,11 @@ import java.util.List;
 public interface SysUserService {
 
     /**
-     * 用户信息列表查询
-     * @param sysUser
+     * 根据用户名称获取用户
+     *
+     * @param userName
      * @return
      */
-    List<SysUser> selectList(SysUser sysUser);
+    SysUser selectUserByUserName(String userName);
 
 }

@@ -12,5 +12,8 @@
     <artifactId>cctvcc-api</artifactId>
     <packaging>pom</packaging>
     <description>系统接口</description>
+    <modules>
+        <module>cctvcc-api-system</module>
+    </modules>
 
 </project>

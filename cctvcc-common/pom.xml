@@ -15,6 +15,10 @@
     <modules>
         <module>cctvcc-datasource</module>
         <module>cctvcc-core</module>
+        <module>cctvcc-log</module>
+        <module>cctvcc-redis</module>
+        <module>cctvcc-security</module>
+        <module>cctvcc-swagger</module>
     </modules>
 
 
