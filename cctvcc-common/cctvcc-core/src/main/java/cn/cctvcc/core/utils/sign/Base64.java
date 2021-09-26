@@ -83,8 +83,7 @@ public final class Base64
     public static String encode(byte[] binaryData)
     {
         if (binaryData == null)
-        {
-            return null;
+        {            return null;
         }
 
         int lengthDataBits = binaryData.length * EIGHTBIT;

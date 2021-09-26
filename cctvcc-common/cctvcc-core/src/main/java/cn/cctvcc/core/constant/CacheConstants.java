@@ -12,4 +12,9 @@ public class CacheConstants {
      */
     public final static String LOGIN_TOKEN_KEY = "login_tokens:";
 
+    /**
+     * 登录密码RSA私钥
+     */
+    public final static String LOGIN_PRIVATE_KEY = "login_private_key:";
+
 }

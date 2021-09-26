@@ -93,6 +93,11 @@ public class Constants {
     public final static long TOKEN_EXPIRE = 30;
 
     /**
+     * 私钥存在时间30s
+     */
+    public final static long PRIVATE_KEY_EXPIRE = 30;
+
+    /**
      * 参数管理 cache key
      */
     public static final String SYS_CONFIG_KEY = "sys_config:";

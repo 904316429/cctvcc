@@ -13,6 +13,7 @@
         <module>cctvcc-modules</module>
         <module>cctvcc-api</module>
         <module>cctvcc-auth</module>
+        <module>cctvcc-gateway</module>
     </modules>
 
     <name>cctvcc</name>

@@ -39,8 +39,7 @@ layui.define('form', function(exports){
       ,'密码必须6到12位，且不能出现空格'
     ] 
   });
-  
-  
+
   //发送短信验证码
   admin.sendAuthCode({
     elem: '#LAY-user-getsmscode'
@@ -51,15 +50,60 @@ layui.define('form', function(exports){
     }
   });
   
-  
-  
-  
   //更换图形验证码
   $body.on('click', '#LAY-user-get-vercode', function(){
     var othis = $(this);
     this.src = 'https://www.oschina.net/action/user/captcha?t='+ new Date().getTime()
   });
-  
+
+  form.render();
+  //提交
+  form.on('submit(LAY-user-login-submit)', function (obj) {
+    // 请求公钥
+    admin.req({
+      url: layui.setter.ctx + '/auth/getPublicKey/'+ obj.field.username //实际使用请改成服务端真实接口
+      , type: 'get'
+      , done: function (res) {
+        obj.field.password = encryptRequest( obj.field.password, res.data);
+        doLogin(obj);
+      }
+    });
+  });
+
+  function doLogin(obj){
+    //请求登入接口
+    admin.req({
+      url: layui.setter.ctx + '/auth/login' //实际使用请改成服务端真实接口
+      , type: 'post'
+      , data: obj.field
+      , done: function (res) {
+
+        //请求成功后，写入 access_token
+        layui.data(setter.tableName, {
+          key: setter.request.tokenName
+          , value: res.data.access_token
+        });
+
+        //登入成功的提示与跳转
+        layer.msg('登入成功', {
+          offset: '15px'
+          , icon: 1
+          , time: 1000
+        }, function () {
+          location.href = '../'; //后台主页
+        });
+      }
+    });
+  }
+
+  // 使用jsencrypt类库加密js方法，
+  function encryptRequest(data, publicKey) {
+    var encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    // ajax请求发送的数据对象
+    return encrypt.encrypt(data);
+  }
+
   //对外暴露的接口
-  exports('user', {});
+  exports('login', {});
 });
