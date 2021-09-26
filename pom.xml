@@ -10,10 +10,10 @@
     <version>1.0.0</version>
     <modules>
         <module>cctvcc-common</module>
-        <module>cctvcc-gateway</module>
         <module>cctvcc-modules</module>
         <module>cctvcc-api</module>
         <module>cctvcc-auth</module>
+        <module>cctvcc-gateways</module>
     </modules>
 
     <name>cctvcc</name>
@@ -44,6 +44,7 @@
         <poi.version>4.1.2</poi.version>
         <common-pool.version>2.10.0</common-pool.version>
         <commons-collections.version>3.2.2</commons-collections.version>
+        <webflux.version>2.5.3</webflux.version>
     </properties>
 
     <dependencyManagement>
@@ -96,11 +97,12 @@
                 <version>${spring-boot.mybatis-plus}</version>
             </dependency>
 
-            <!--<dependency>-->
-                <!--<groupId>org.mybatis.spring.boot</groupId>-->
-                <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
-                <!--<version>${spring-boot.mybatis}</version>-->
-            <!--</dependency>-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${webflux.version}</version>
+            </dependency>
 
             <!-- Swagger 依赖配置 -->
             <dependency>

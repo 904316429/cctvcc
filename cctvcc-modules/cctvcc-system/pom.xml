@@ -56,12 +56,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- cctvcc core -->
-        <dependency>
-            <groupId>cn.cctvcc</groupId>
-            <artifactId>cctvcc-core</artifactId>
-        </dependency>
-
         <!-- cctvcc log -->
         <dependency>
             <groupId>cn.cctvcc</groupId>

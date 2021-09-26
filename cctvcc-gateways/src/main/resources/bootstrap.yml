@@ -1,0 +1,72 @@
+# Tomcat
+server:
+  port: 9000
+spring:
+  application:
+    name: cloudalibaba-sentinel-service
+#  main:
+#    allow-bean-definition-overriding: true
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          lowerCaseServiceId: true
+#          enabled: true
+#      routes:
+#        # 认证中心
+#        - id: cctvcc-gateways
+#          uri: lb://cctvcc-gateways
+#          predicates:
+#            - Path=/**
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848 # nacos 服务注册中心
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080 # 配置sentinel dashboard 地址
+#        port: 8719 # 默认8719 端口, 假如被占用会自动从8719 开市依次+1 扫描, 直至找到未被占用的端口
+#
+#management:
+#  endpoint:
+#    web:
+#      exposure:
+#        include: '*'
+## Spring
+#spring:
+#  application:
+#    name: cctvcc-gateways # 应用名称
+#  profiles:
+#    active: dev # 环境配置
+#  main:
+#    allow-bean-definition-overriding: true
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848 # nacos 服务注册中心地址
+#        namespace: 2b699ec0-2a6a-47f7-ab0c-b7ff0bc956dc # 命名空间id
+#      config:
+#        server-addr: ${spring.cloud.nacos.discovery.server-addr} # 配置中心地址
+#        file-extension: yml # 配置文件格式
+#        namespace: ${spring.cloud.nacos.discovery.namespace} # 命名空间id
+#        # 共享配置
+#        shared-configs:
+#          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+##          - data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+##            group: DEFAULT_GROUP
+##            refresh: true
+#      sentinel:
+#        # 取消控制台懒加载
+#        eager: true
+#        transport:
+#          dashboard: localhost:8080 # 控制台地址
+#          port: 8719 # 默认8719 端口, 假如被占用会自动从8719 开市依次+1 扫描, 直至找到未被占用的端口
+#        # nacos配置持久化
+#        datasource:
+#          ds1:
+#            nacos:
+#              server-addr: ${spring.cloud.nacos.discovery.server-addr}
+#              namespace:  ${spring.cloud.nacos.discovery.namespace}
+#              dataId: sentinel-cctvcc-gateway
+#              groupId: DEFAULT_GROUP
+#              data-type: json
+#              rule-type: flow

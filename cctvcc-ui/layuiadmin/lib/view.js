@@ -68,6 +68,7 @@ layui.define(['laytpl', 'layer'], function(exports){
     
     options.data = options.data || {};
     options.headers = options.headers || {};
+    options.contentType == null || options.contentType == undefined || options.contentType == ''?'':options.contentType;
     
     if(request.tokenName){
       //自动给参数传入默认 token
@@ -80,14 +81,16 @@ layui.define(['laytpl', 'layer'], function(exports){
         ?  options.headers[request.tokenName]
       : (layui.data(setter.tableName)[request.tokenName] || '');
     }
-    
     delete options.success;
     delete options.error;
 
+    // layer.load();
     return $.ajax($.extend({
-      type: 'get'
+      type: options.type
+      ,contentType: options.contentType
       ,dataType: 'json'
       ,success: function(res){
+        // layer.closeAll('loading');
         var statusCode = response.statusCode;
         
         //只有 response 的 code 一切正常才执行 done

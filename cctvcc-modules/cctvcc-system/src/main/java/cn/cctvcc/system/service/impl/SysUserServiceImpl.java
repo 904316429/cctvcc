@@ -4,9 +4,8 @@ import cn.cctvcc.system.api.domain.SysUser;
 import cn.cctvcc.system.mapper.SysUserMapper;
 import cn.cctvcc.system.service.SysUserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @description: 用户信息实现类
@@ -16,7 +15,7 @@ import javax.annotation.Resource;
 @Service
 public class SysUserServiceImpl implements SysUserService {
 
-    @Resource
+    @Autowired
     private SysUserMapper sysUserMapper;
 
     /**

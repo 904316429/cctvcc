@@ -19,15 +19,12 @@ public class RemoteSysUserFallbackFactory implements FallbackFactory<RemoteSysUs
     private static final Logger log = LoggerFactory.getLogger(RemoteSysUserFallbackFactory.class);
 
     @Override
-    public RemoteSysUserService create(Throwable throwable)
-    {
+    public RemoteSysUserService create(Throwable throwable) {
         log.error("用户服务调用失败:{}", throwable.getMessage());
         return new RemoteSysUserService() {
-
             @Override
-            public R<LoginUser> userInfo(String username)
-            {
-                return R.fail("获取用户失败:" + throwable.getMessage());
+            public R<LoginUser> userInfo(String username) {
+                return R.fail("获取用户失败,请稍候再试");
             }
         };
     }

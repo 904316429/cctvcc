@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.cctvcc.security.handler.GlobalExceptionHandler,\
+  cn.cctvcc.security.service.TokenService
+#  ,\
+#  cn.cctvcc.security.service.ValidateCodeService

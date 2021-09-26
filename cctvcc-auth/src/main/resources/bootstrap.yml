@@ -1,6 +1,6 @@
 # Tomcat
 server:
-  port: 9000
+  port: 9100
 
 # Spring
 spring:
@@ -15,8 +15,7 @@ spring:
         namespace: 2b699ec0-2a6a-47f7-ab0c-b7ff0bc956dc # 命名空间id
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr} # 配置中心地址
-        # 配置文件格式
-        file-extension: yml
+        file-extension: yml # 配置文件格式
         namespace: ${spring.cloud.nacos.discovery.namespace} # 命名空间id
         # 共享配置
         shared-configs:

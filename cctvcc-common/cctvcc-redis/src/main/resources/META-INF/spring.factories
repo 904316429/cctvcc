@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.cctvcc.redis.config.RedisConfig,\
+  cn.cctvcc.redis.service.RedisService

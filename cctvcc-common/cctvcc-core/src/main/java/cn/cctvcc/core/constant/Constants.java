@@ -7,6 +7,15 @@ package cn.cctvcc.core.constant;
  */
 public class Constants {
 
+    /**
+     * UTF-8 字符集
+     */
+    public static final String UTF8 = "UTF-8";
+
+    /**
+     * GBK 字符集
+     */
+    public static final String GBK = "GBK";
 
     /**
      * 成功标记
@@ -17,6 +26,11 @@ public class Constants {
      * 失败标记
      */
     public static final Integer FAIL = 500;
+
+    /**
+     * 登录失效标记
+     */
+    public static final Integer OVERTIME = 1001;
 
     /**
      * 登录成功
@@ -37,6 +51,11 @@ public class Constants {
      * 登录失败
      */
     public static final String LOGIN_FAIL = "Error";
+
+    /**
+     * 登录失效
+     */
+    public static final String LOGIN_OVERTIME = "OverTime";
 
     /**
      * 当前记录起始索引
@@ -71,7 +90,7 @@ public class Constants {
     /**
      * 令牌有效期（分钟）
      */
-    public final static long TOKEN_EXPIRE = 720;
+    public final static long TOKEN_EXPIRE = 30;
 
     /**
      * 参数管理 cache key
